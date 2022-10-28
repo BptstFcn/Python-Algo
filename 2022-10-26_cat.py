@@ -31,10 +31,6 @@ def cat_tree(start: int, finish: int) -> int:
 
     # Once we do get a multiple of 3, then we can make the cat jump as fast as possible
     shelf_count += diff // 3 # Optimization made for this case
-    
-    # while diff > 1:
-    #    diff -= 3
-    #    shelf_count += 1
 
     return shelf_count
 
@@ -52,9 +48,8 @@ def cat_tree_path(start: int, finish: int) -> list[int]:
         path.append(shelf_number) # Here we add the actual shelf number
 
     # Once we do get a multiple of 3, then we can make the cat jump as fast as possible
-    while diff > 1:
+    for _ in range(0, diff // 3):
         shelf_number += 3
-        diff -= 3
         path.append(shelf_number)
 
     return path
