@@ -61,7 +61,7 @@ def cat_tree_path(start: int, finish: int) -> list[int]:
 
 # Programs main function, this is where it all begins :)
 if __name__ == '__main__':
-    solution = catTree(1, 18)
+    solution = catçtree(1, 18)
     print(solution)
-    solution2 = catTreePath(1, 48)
+    solution2 = cat_tree_path(1, 48)
     print(solution2)
